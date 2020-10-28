@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
@@ -14,7 +13,7 @@
   <body>     
     <section class="text-gray-700 body-font">
         <div class="container px-5 py-10 mx-auto">
-            <img src="\image\gpa-calculator.png" class="rounded mx-auto d-block" alt="North South University CGPA Calculator - Perahin NSUer!" width="100" height="100">
+            <img src="image\gpa-calculator.png" class="rounded mx-auto d-block" alt="North South University CGPA Calculator - Perahin NSUer!" width="100" height="100">
           <div class="flex flex-col text-center w-full mb-3">
             <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">NSU CGPA Calculator</h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Calculate Your own CGPA by yourself is now very esay. No need to wait for Updateing RDS.</p>
@@ -35,19 +34,6 @@
                         </div>
                     </td>
                 </tr>
-            <!--
-            </table>
-            <table class="table-auto w-full text-left whitespace-no-wrap table-striped table-dark">
-              <thead>
-                <tr>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tl rounded-bl">Course Initial</th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">Cradits</th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">Grade</th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">Price</th>
-                  <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tr rounded-br"></th>
-                </tr>
-              </thead>
-            -->
                 <tr>
                     <td>  
                         <div class="px-4 py-3">
@@ -77,7 +63,6 @@
                         </div>
                     </td>
                 </tr>
-
                 <tr>
                     <td>  
                         <div class="px-4 py-3">
@@ -107,7 +92,6 @@
                         </div>
                     </td>
                 </tr>
-
                 <tr>
                     <td>  
                         <div class="px-4 py-3">
@@ -154,8 +138,7 @@
                     </td>
                     <td class="px-4 py-3 bg-success" style="text-align:center; font-size:2vw">
                         <h2>CGPA</h2>
-                        <p style="font-size:3vw"><strong id="cgpaShow">0.00</strong></p>
-                        
+                        <p style="font-size:3vw"><strong id="cgpaShow">0.00</strong></p>  
                     </td>
                 </tr>
                 </tbody>
@@ -165,17 +148,8 @@
       </section>
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    -->
 
     <script>
         let courseNo = 3;
@@ -204,7 +178,7 @@
                 
                 let cr = "cr"+i;
                 let gr = "gr"+i;
-                console.log(cr);
+                //console.log(cr);
                 cradit = document.getElementById(cr).value;
                 grade = document.getElementById(gr).value;
                 switch(grade)  
@@ -234,36 +208,22 @@
                     case "F": cg=0;  
                     break;  
                 } 
-                console.log(cg);
-                console.log('7-');console.log(localStorage.getItem('itemsJson'));
-                if (localStorage.getItem('itemsJson') !== null)
-                {
-                    
+                //console.log(cg);
+                //console.log(localStorage.getItem('itemsJson'));
+                if (localStorage.getItem('itemsJson') !== null){
                     itemJsonArrayStr = localStorage.getItem('itemsJson');
                     console.log('jaka')
                     console.log(itemJsonArrayStr);
-
                     itemJsonArray = JSON.parse(itemJsonArrayStr);
-                    //itemJsonArray.push([5,6]);
-                    console.log('snta');
                    // console.log(itemJsonArraystr);
-                    
-                   console.log("habi jabi")
                     itemJsonArray.push([cradit, cg]);
                     localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
-
-
                 }
-                
                 else{
-                    console.log('8-');console.log(localStorage.getItem('itemsJson'));
                     itemJsonArray = [];
-                
                     itemJsonArray.push([cradit, cg]);
-                    console.log('1-');console.log(itemJsonArray);
                     localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
                 }
-
             }
             let totalCradit = 0;
             let totalCgSum = 0;
@@ -278,16 +238,14 @@
                totalCradit+=Number(item[0]);
                totalCgSum += Number((item[1])*Number(item[0]));
             }
-
-            console.log(totalCradit,totalCgSum);
-
+            //console.log(totalCradit,totalCgSum);
             a = Number(document.getElementById("prevCg").value);
             b = Number(document.getElementById("prevCr").value);
-            console.log(a,b);
+            //console.log(a,b);
             totalCgSum+=(a*b);
             totalCradit+=b;
             let finalCg = (totalCgSum/totalCradit);
-            console.log("Cgpa Calculated "+finalCg);
+            //console.log("Cgpa Calculated "+finalCg);
             document.getElementById("craditPassed").innerHTML = totalCradit;
             document.getElementById("cgpaShow").innerHTML = finalCg.toFixed(2);
 
